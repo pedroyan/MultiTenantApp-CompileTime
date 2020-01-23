@@ -29,8 +29,8 @@
   <Choose>
     <When Condition=" '$(Configuration)'=='BananaDebug' Or '$(Configuration)'=='BananaRelease' ">
       <ItemGroup>
-        <EmbeddedResource Include="Images\Banana\monkey.png" />
         <EmbeddedResource Include="Images\Banana\FacePalm.png" />
+        <EmbeddedResource Include="Images\Banana\monkey.png" />
       </ItemGroup>
     </When>
     <Otherwise>
