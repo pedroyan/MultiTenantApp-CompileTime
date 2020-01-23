@@ -1,18 +1,14 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Configurations>Debug;Release;BananaRelease;BananaDebug</Configurations>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DebugType>pdbonly</DebugType>
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
-
-  <ItemGroup>
-    <None Remove="Images\Banana\Banana.png" />
-    <None Remove="Images\Banana\BananaFacePalm.png" />
-  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="4.1.0.555618" />
@@ -23,10 +19,19 @@
     <Folder Include="Services\" />
     <Folder Include="Controls\" />
   </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Images\Banana\Banana.png" />
-    <EmbeddedResource Include="Images\Banana\BananaFacePalm.png" />
-    <EmbeddedResource Include="Images\Monkey\monkey.png" />
-    <EmbeddedResource Include="Images\Monkey\FacePalm.jpg" />
-  </ItemGroup>
+  <Choose>
+    <When Condition=" '$(Configuration)'=='BananaDebug' Or '$(Configuration)'=='BananaRelease' ">
+      <ItemGroup>
+        <EmbeddedResource Include="Images\Banana\Banana.png" />
+        <EmbeddedResource Include="Images\Banana\BananaFacePalm.png" />
+      </ItemGroup>
+    </When>
+    <Otherwise>
+      <ItemGroup>
+        <EmbeddedResource Include="Images\Monkey\monkey.png" />
+        <EmbeddedResource Include="Images\Monkey\FacePalm.jpg" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+
 </Project>
