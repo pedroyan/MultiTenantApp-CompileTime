@@ -8,6 +8,11 @@ namespace ThemingDemo
         {
             InitializeComponent();
             MainPage = new NavigationPage(new UserSummaryPage());
+#if Banana
+            ThemeHelper.ChangeTheme(Theme.Dark);
+#else
+            ThemeHelper.ChangeTheme(Theme.Light);
+#endif
         }
 
         protected override void OnStart()

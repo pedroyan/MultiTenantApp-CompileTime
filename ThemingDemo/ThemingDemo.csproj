@@ -10,6 +10,14 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='BananaDebug|AnyCPU'">
+    <DefineConstants>TRACE;Banana</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='BananaRelease|AnyCPU'">
+    <DefineConstants>TRACE;Banana</DefineConstants>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="4.1.0.555618" />
   </ItemGroup>

@@ -6,7 +6,7 @@
              mc:Ignorable="d"
              x:Class="ThemingDemo.App">
     <Application.Resources>
-        <ResourceDictionary Source="Themes/LightTheme.xaml" />
+        <ResourceDictionary />
 
         <Style TargetType="NavigationPage">
             <Setter Property="BarBackgroundColor"
