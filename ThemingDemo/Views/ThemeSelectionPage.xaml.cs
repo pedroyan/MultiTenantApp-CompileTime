@@ -17,23 +17,8 @@ namespace ThemingDemo
             Picker picker = sender as Picker;
             Theme theme = (Theme)picker.SelectedItem;
 
-            ICollection<ResourceDictionary> mergedDictionaries = Application.Current.Resources.MergedDictionaries;
-            if (mergedDictionaries != null)
-            {
-                mergedDictionaries.Clear();
-
-                switch (theme)
-                {
-                    case Theme.Dark:
-                        mergedDictionaries.Add(new DarkTheme());
-                        break;
-                    case Theme.Light:
-                    default:
-                        mergedDictionaries.Add(new LightTheme());
-                        break;
-                }
+            if (ThemeHelper.ChangeTheme(theme))
                 statusLabel.Text = $"{theme.ToString()} theme loaded. Close this page.";
-            }
         }
 
         public async Task Dismiss()
