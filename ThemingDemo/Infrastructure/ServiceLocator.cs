@@ -16,6 +16,7 @@ namespace ThemingDemo.Infrastructure
 
             //Ideally I would break the application into an MVVM structure. But since this is only a POC project, I won't do that. Instead
             //I wiill resolve xaml pages directly just to prove a point
+            _container.Register<UserDetailsPage>();
 
             // Services - by default, TinyIoC will register interface registrations as singletons.
 #if Banana

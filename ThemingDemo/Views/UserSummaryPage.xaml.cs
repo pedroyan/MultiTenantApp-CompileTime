@@ -14,7 +14,7 @@ namespace ThemingDemo
 
         async void OnNavigationInvoked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new UserDetailsPage(ServiceLocator.Resolve<IImageService>()));
+            await Navigation.PushAsync(ServiceLocator.Resolve<UserDetailsPage>());
         }
 
         async void OnThemeToolbarItemClicked(object sender, EventArgs e)

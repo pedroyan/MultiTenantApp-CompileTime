@@ -6,8 +6,6 @@ namespace ThemingDemo
 {
     public partial class UserDetailsPage : ContentPage
     {
-        private readonly IImageService _imageService;
-
         public UserDetailsPage(IImageService imageService)
         {
             InitializeComponent();
