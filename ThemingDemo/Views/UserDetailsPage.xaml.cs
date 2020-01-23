@@ -9,7 +9,7 @@ namespace ThemingDemo
         public UserDetailsPage(IImageService imageService)
         {
             InitializeComponent();
-            FacePalmImage.Source = imageService.FromFile("FacePalm.png");
+            FacePalmImage.Source = imageService.FromEmbeddedResource("FacePalm.png");
         }
 
         async void OnThemeToolbarItemClicked(object sender, EventArgs e)

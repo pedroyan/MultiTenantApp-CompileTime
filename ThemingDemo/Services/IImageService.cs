@@ -7,6 +7,6 @@ namespace ThemingDemo.Services
 {
     public interface IImageService
     {
-        ImageSource FromFile(string sourceName);
+        ImageSource FromEmbeddedResource(string sourceName);
     }
 }

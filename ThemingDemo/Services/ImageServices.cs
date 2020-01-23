@@ -15,7 +15,7 @@ namespace ThemingDemo.Services
 
         public string BrandFolder { get; }
         private string PathToResource => $"ThemingDemo.Images.{BrandFolder}";
-        public virtual ImageSource FromFile(string sourceName)
+        public virtual ImageSource FromEmbeddedResource(string sourceName)
         {
             return ImageSource.FromResource($"{PathToResource}.{sourceName}");
         }

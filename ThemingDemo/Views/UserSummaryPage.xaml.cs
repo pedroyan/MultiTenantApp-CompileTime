@@ -7,9 +7,10 @@ namespace ThemingDemo
 {
     public partial class UserSummaryPage : ContentPage
     {
-        public UserSummaryPage()
+        public UserSummaryPage(IImageService imageService)
         {
             InitializeComponent();
+            MonkeyImage.Source = imageService.FromEmbeddedResource("monkey.png");
         }
 
         async void OnNavigationInvoked(object sender, EventArgs e)

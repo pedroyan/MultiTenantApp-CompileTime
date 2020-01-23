@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using ThemingDemo.Infrastructure;
+using Xamarin.Forms;
 
 namespace ThemingDemo
 {
@@ -7,7 +8,7 @@ namespace ThemingDemo
         public App()
         {
             InitializeComponent();
-            MainPage = new NavigationPage(new UserSummaryPage());
+            MainPage = new NavigationPage(ServiceLocator.Resolve<UserSummaryPage>());
 #if Banana
             ThemeHelper.ChangeTheme(Theme.Dark);
 #else
