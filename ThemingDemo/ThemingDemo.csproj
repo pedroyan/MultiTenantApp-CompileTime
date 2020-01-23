@@ -10,6 +10,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\Banana\Banana.png" />
+    <None Remove="Images\Banana\BananaFacePalm.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="4.1.0.555618" />
   </ItemGroup>
   <ItemGroup>
@@ -19,7 +24,9 @@
     <Folder Include="Controls\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Images\monkey.png" />
-    <EmbeddedResource Include="Images\FacePalm.jpg" />
+    <EmbeddedResource Include="Images\Banana\Banana.png" />
+    <EmbeddedResource Include="Images\Banana\BananaFacePalm.png" />
+    <EmbeddedResource Include="Images\Monkey\monkey.png" />
+    <EmbeddedResource Include="Images\Monkey\FacePalm.jpg" />
   </ItemGroup>
 </Project>
