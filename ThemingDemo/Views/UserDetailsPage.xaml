@@ -17,7 +17,7 @@
                 <RowDefinition Height="0.1*" />
                 <RowDefinition Height="0.2*" />
             </Grid.RowDefinitions>
-            <Image Source="{local:ImageResource ThemingDemo.Images.Banana.BananaFacePalm.png}"
+            <Image x:Name="FacePalmImage"
                    Aspect="AspectFill" />
             <Grid BackgroundColor="{DynamicResource TransparentBackgroundColor}">
                 <Label VerticalOptions="End"

@@ -1,13 +1,17 @@
 ﻿using System;
+using ThemingDemo.Services;
 using Xamarin.Forms;
 
 namespace ThemingDemo
 {
     public partial class UserDetailsPage : ContentPage
     {
-        public UserDetailsPage()
+        private readonly IImageService _imageService;
+
+        public UserDetailsPage(IImageService imageService)
         {
             InitializeComponent();
+            FacePalmImage.Source = imageService.FromFile("FacePalm.png");
         }
 
         async void OnThemeToolbarItemClicked(object sender, EventArgs e)

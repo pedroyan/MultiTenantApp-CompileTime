@@ -13,6 +13,8 @@ namespace ThemingDemo
 #else
             ThemeHelper.ChangeTheme(Theme.Light);
 #endif
+
+           
         }
 
         protected override void OnStart()

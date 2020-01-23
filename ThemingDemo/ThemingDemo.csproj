@@ -24,7 +24,6 @@
   <ItemGroup>
     <Folder Include="Views\" />
     <Folder Include="Themes\" />
-    <Folder Include="Services\" />
     <Folder Include="Controls\" />
   </ItemGroup>
   <Choose>
@@ -37,7 +36,7 @@
     <Otherwise>
       <ItemGroup>
         <EmbeddedResource Include="Images\Monkey\monkey.png" />
-        <EmbeddedResource Include="Images\Monkey\FacePalm.jpg" />
+        <EmbeddedResource Include="Images\Monkey\FacePalm.png" />
       </ItemGroup>
     </Otherwise>
   </Choose>

@@ -1,4 +1,6 @@
 ﻿using System;
+using ThemingDemo.Infrastructure;
+using ThemingDemo.Services;
 using Xamarin.Forms;
 
 namespace ThemingDemo
@@ -12,7 +14,7 @@ namespace ThemingDemo
 
         async void OnNavigationInvoked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new UserDetailsPage());
+            await Navigation.PushAsync(new UserDetailsPage(ServiceLocator.Resolve<IImageService>()));
         }
 
         async void OnThemeToolbarItemClicked(object sender, EventArgs e)
